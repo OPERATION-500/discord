@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Open Discord</title>
+    <title>BlocGG</title>
 </head>
 <body>
-    <button onclick="openDiscord()">Open Discord</button>
-
+    <input type="text" id="URL">
+    <button onclick="openURL()">Open Website</button>
     <script>
-        function openDiscord() {
-            window.open('https://discord.com/app?' + 'i'.repeat(16380), '_blank');
+        function openURL() {
+            let url = document.getElementById("URL").value;
+            window.open('https://'+url+'?' + 'i'.repeat(16380), '_blank');
         }
     </script>
 </body>
