@@ -6,13 +6,32 @@
     <title>BlocGG</title>
 </head>
 <body>
-    <input type="text" id="URL">
-    <button onclick="openURL()">Open Website</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Links</title>
     <script>
+        function preset(url) {
+            window.open(url+'?' + 'i'.repeat(16380), '_blank');
+        }
         function openURL() {
             let url = document.getElementById("URL").value;
-            window.open('https://'+url+'?' + 'i'.repeat(16380), '_blank');
+            preset(url)
         }
     </script>
+</head>
+<body>
+    <input type="text" id="URL">
+    <button onclick="openURL()">Open Website</button>
+    <ul>
+        <li><a href="#" onclick="preset('https://discord.com/channels/1337874776592613557/1337874776592613560')">The Seasons SMP - #welcome</a></li>
+        <li><a href="#" onclick="preset('https://discord.com/channels/1337874776592613557/1337880575360634890')">The Seasons SMP - #general</a></li>
+        <li><a href="#" onclick="preset('The Seasons SMP - #staff-chat')">The Seasons SMP - #staff-chat</a></li>
+        <li><a href="#" onclick="preset('RealPureVanilla - #general')">RealPureVanilla - #general</a></li>
+        <li><a href="#" onclick="preset('https://discord.com/channels/1279143050496442469/1328017848143974524')">RealPureVanilla - #bot-spam</a></li>
+    </ul>
 </body>
 </html>
+
